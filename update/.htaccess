@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "update"
-AuthUserFile "/home/punto4/.htpasswds/public_html/resignation/update/passwd"
+AuthUserFile "/home/content/64/11557064/html/resignations/update/passwd"
 require valid-user
