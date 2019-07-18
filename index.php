@@ -47,16 +47,16 @@ h1 {
 </style>
 
 <script>
-
 function howlong() {
 
 var note = "";
 	<?php include('resignation.php'); ?>
 
-    resignationTime = new Date(resignationDateS + " " + resignationTimeS+":00");
-    delta = (new Date().getTime() - resignationTime) / 1000;
+    resignationTime = new Date(resignationDateS + " " + resignationTimeS);
+    now = new Date();
+    delta = (now.getTime() - resignationTime.getTime()) / 1000;
 
-    // calculate (and subtract) whole days
+// calculate (and subtract) whole days
 var days = Math.floor(delta / 86400);
 delta -= days * 86400;
 
