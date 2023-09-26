@@ -1,5 +1,4 @@
-<?php
-?>
+<!DOCTYPE html>
 <html>
 <head><title>How long since the last resignation from the UK Government?</title></head>
 <body>
@@ -49,12 +48,14 @@ h1 {
 <script>
 function howlong() {
 
+var resignationName = "Margot James";
+var resignationDateS = "July 18, 2019";
+var resignationTimeS = "13:35:00 GMT+1:00";
 var note = "";
-	<?php include('resignation.php'); ?>
 
-    resignationTime = new Date(resignationDateS + " " + resignationTimeS);
-    now = new Date();
-    delta = (now.getTime() - resignationTime.getTime()) / 1000;
+resignationTime = new Date(resignationDateS + " " + resignationTimeS);
+now = new Date();
+delta = (now.getTime() - resignationTime.getTime()) / 1000;
 
 // calculate (and subtract) whole days
 var days = Math.floor(delta / 86400);
